@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Mesas</title>
+    <link rel="stylesheet" href="Estilos/menu.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Mesa 1 -->
+        <div class="mesa" id="mesa1">
+            <h2>Mesa 1</h2>
+            <button class="menu-btn" onclick="toggleMenu('menu1')">Mostrar Menú</button>
+            <div class="menu" id="menu1">
+                <div class="comidas">
+                    <p><strong>Comidas Diarias:</strong></p>
+                    <div class="item">
+                        <label for="hamburguesa1">Hamburguesa - $15,000</label>
+                        <input type="number" id="hamburguesa1" data-price="15000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="pizza1">Pizza - $20,000</label>
+                        <input type="number" id="pizza1" data-price="20000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="ensalada1">Ensalada - $12,000</label>
+                        <input type="number" id="ensalada1" data-price="12000" min="0" value="0">
+                    </div>
+                </div>
+                <button class="beverages-btn" onclick="toggleBeverages('beverages1')">Mostrar Bebidas</button>
+                <div class="beverages" id="beverages1">
+                    <div class="item">
+                        <label for="refresco1">Refresco - $5,000</label>
+                        <input type="number" id="refresco1" data-price="5000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="agua1">Agua - $3,000</label>
+                        <input type="number" id="agua1" data-price="3000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="cerveza1">Cerveza - $7,000</label>
+                        <input type="number" id="cerveza1" data-price="7000" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total">
+                    <p>Precio Total: <span id="total1">$0</span></p>
+                    <p>Pedidos Realizados: <span id="orders1">0</span></p>
+                    <button onclick="addOrder('mesa1')">Añadir Pedido</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repetir para mesa2 y mesa3 -->
+        <!-- Ejemplo para Mesa 2 -->
+        <div class="mesa" id="mesa2">
+            <h2>Mesa 2</h2>
+            <button class="menu-btn" onclick="toggleMenu('menu2')">Mostrar Menú</button>
+            <div class="menu" id="menu2">
+                <div class="comidas">
+                    <p><strong>Comidas Diarias:</strong></p>
+                    <div class="item">
+                        <label for="hamburguesa2">Hamburguesa - $15,000</label>
+                        <input type="number" id="hamburguesa2" data-price="15000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="pizza2">Pizza - $20,000</label>
+                        <input type="number" id="pizza2" data-price="20000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="ensalada2">Ensalada - $12,000</label>
+                        <input type="number" id="ensalada2" data-price="12000" min="0" value="0">
+                    </div>
+                </div>
+                <button class="beverages-btn" onclick="toggleBeverages('beverages2')">Mostrar Bebidas</button>
+                <div class="beverages" id="beverages2">
+                    <div class="item">
+                        <label for="refresco2">Refresco - $5,000</label>
+                        <input type="number" id="refresco2" data-price="5000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="agua2">Agua - $3,000</label>
+                        <input type="number" id="agua2" data-price="3000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="cerveza2">Cerveza - $7,000</label>
+                        <input type="number" id="cerveza2" data-price="7000" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total">
+                    <p>Precio Total: <span id="total2">$0</span></p>
+                    <p>Pedidos Realizados: <span id="orders2">0</span></p>
+                    <button onclick="addOrder('mesa2')">Añadir Pedido</button>
+                </div>
+            </div>
+        </div>
+        <!-- Ejemplo para Mesa 3 -->
+        <div class="mesa" id="mesa3">
+            <h2>Mesa 3</h2>
+            <button class="menu-btn" onclick="toggleMenu('menu3')">Mostrar Menú</button>
+            <div class="menu" id="menu3">
+                <div class="comidas">
+                    <p><strong>Comidas Diarias:</strong></p>
+                    <div class="item">
+                        <label for="hamburguesa3">Hamburguesa - $15,000</label>
+                        <input type="number" id="hamburguesa3" data-price="15000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="pizza3">Pizza - $20,000</label>
+                        <input type="number" id="pizza3" data-price="20000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="ensalada3">Ensalada - $12,000</label>
+                        <input type="number" id="ensalada3" data-price="12000" min="0" value="0">
+                    </div>
+                </div>
+                <button class="beverages-btn" onclick="toggleBeverages('beverages3')">Mostrar Bebidas</button>
+                <div class="beverages" id="beverages3">
+                    <div class="item">
+                        <label for="refresco3">Refresco - $5,000</label>
+                        <input type="number" id="refresco3" data-price="5000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="agua3">Agua - $3,000</label>
+                        <input type="number" id="agua3" data-price="3000" min="0" value="0">
+                    </div>
+                    <div class="item">
+                        <label for="cerveza3">Cerveza - $7,000</label>
+                        <input type="number" id="cerveza3" data-price="7000" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total">
+                    <p>Precio Total: <span id="total3">$0</span></p>
+                    <p>Pedidos Realizados: <span id="orders3">0</span></p>
+                    <button onclick="addOrder('mesa3')">Añadir Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/menuComida.js"></script>
+</body>
+</html>
