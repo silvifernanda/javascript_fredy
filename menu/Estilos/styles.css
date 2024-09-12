@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tables {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.table {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    position: relative;
+}
+
+.order-form {
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.food-menu, .drink-menu {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.decrement {
+    background-color: #dc3545;
+}
+
+button.increment {
+    background-color: #28a745;
+}
+
+.quantity {
+    margin: 0 10px;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+button.order-button {
+    background-color: #28a745;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+button.order-button:hover {
+    background-color: #218838;
+}
+
+p {
+    font-weight: bold;
+}
+
+.total-final {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.total-final h2 {
+    margin: 0;
+}
