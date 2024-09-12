@@ -3,139 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de Mesas</title>
-    <link rel="stylesheet" href="Estilos/menu.css">
+    <title>Tienda de Comida</title>
+    <link rel="stylesheet" href="Estilos/styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Mesa 1 -->
-        <div class="mesa" id="mesa1">
-            <h2>Mesa 1</h2>
-            <button class="menu-btn" onclick="toggleMenu('menu1')">Mostrar Menú</button>
-            <div class="menu" id="menu1">
-                <div class="comidas">
-                    <p><strong>Comidas Diarias:</strong></p>
-                    <div class="item">
-                        <label for="hamburguesa1">Hamburguesa - $15,000</label>
-                        <input type="number" id="hamburguesa1" data-price="15000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="pizza1">Pizza - $20,000</label>
-                        <input type="number" id="pizza1" data-price="20000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="ensalada1">Ensalada - $12,000</label>
-                        <input type="number" id="ensalada1" data-price="12000" min="0" value="0">
-                    </div>
+        <h1>Tienda de Comida</h1>
+        
+        <!-- Mesas -->
+        <div class="tables">
+            <!-- Mesa 1 -->
+            <div class="table" id="table1">
+                <h2>Mesa 1</h2>
+                <div class="order-form">
+                    <label for="food1">Comida:</label>
+                    <select id="food1" class="food-menu">
+                        <option value="10">Pizza - $10000</option>
+                        <option value="5">Hamburguesa - $5000</option>
+                        <option value="4">Ensalada - $4000</option>
+                        <option value="6">Tacos - $6000</option>
+                        <option value="7">Sushi - $7000</option>
+                    </select>
+                    <label for="quantity-food1">Cantidad:</label>
+                    <button class="decrement" data-type="food">-</button>
+                    <span class="quantity" data-type="food">0</span>
+                    <button class="increment" data-type="food">+</button>
+                    <br>
+                    <label for="drink1">Bebida:</label>
+                    <select id="drink1" class="drink-menu">
+                        <option value="2">Refresco - $2000</option>
+                        <option value="3">Cerveza - $3000</option>
+                        <option value="1">Agua - $1000</option>
+                        <option value="4">Jugo - $4000</option>
+                        <option value="5">Cóctel - $5000</option>
+                    </select>
+                    <label for="quantity-drink1">Cantidad:</label>
+                    <button class="decrement" data-type="drink">-</button>
+                    <span class="quantity" data-type="drink">0</span>
+                    <button class="increment" data-type="drink">+</button>
                 </div>
-                <button class="beverages-btn" onclick="toggleBeverages('beverages1')">Mostrar Bebidas</button>
-                <div class="beverages" id="beverages1">
-                    <div class="item">
-                        <label for="refresco1">Refresco - $5,000</label>
-                        <input type="number" id="refresco1" data-price="5000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="agua1">Agua - $3,000</label>
-                        <input type="number" id="agua1" data-price="3000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="cerveza1">Cerveza - $7,000</label>
-                        <input type="number" id="cerveza1" data-price="7000" min="0" value="0">
-                    </div>
+                <p>Total: $<span class="total">0</span></p>
+                <button class="order-button">Hacer Pedido</button>
+            </div>
+
+            <!-- Mesa 2 -->
+            <div class="table" id="table2">
+                <h2>Mesa 2</h2>
+                <div class="order-form">
+                    <label for="food2">Comida:</label>
+                    <select id="food2" class="food-menu">
+                        <option value="10">Pizza - $10000</option>
+                        <option value="5">Hamburguesa - $5000</option>
+                        <option value="4">Ensalada - $4000</option>
+                        <option value="6">Tacos - $6000</option>
+                        <option value="7">Sushi - $7000</option>
+                    </select>
+                    <label for="quantity-food2">Cantidad:</label>
+                    <button class="decrement" data-type="food">-</button>
+                    <span class="quantity" data-type="food">0</span>
+                    <button class="increment" data-type="food">+</button>
+                    <br>
+                    <label for="drink2">Bebida:</label>
+                    <select id="drink2" class="drink-menu">
+                        <option value="2">Refresco - $2000</option>
+                        <option value="3">Cerveza - $3000</option>
+                        <option value="1">Agua - $1000</option>
+                        <option value="4">Jugo - $4000</option>
+                        <option value="5">Cóctel - $5000</option>
+                    </select>
+                    <label for="quantity-drink2">Cantidad:</label>
+                    <button class="decrement" data-type="drink">-</button>
+                    <span class="quantity" data-type="drink">0</span>
+                    <button class="increment" data-type="drink">+</button>
                 </div>
-                <div class="total">
-                    <p>Precio Total: <span id="total1">$0</span></p>
-                    <p>Pedidos Realizados: <span id="orders1">0</span></p>
-                    <button onclick="addOrder('mesa1')">Añadir Pedido</button>
+                <p>Total: $<span class="total">0</span></p>
+                <button class="order-button">Hacer Pedido</button>
+            </div>
+
+            <!-- Mesa 3 -->
+            <div class="table" id="table3">
+                <h2>Mesa 3</h2>
+                <div class="order-form">
+                    <label for="food3">Comida:</label>
+                    <select id="food3" class="food-menu">
+                        <option value="10">Pizza - $10000</option>
+                        <option value="5">Hamburguesa - $5000</option>
+                        <option value="4">Ensalada - $4000</option>
+                        <option value="6">Tacos - $6000</option>
+                        <option value="7">Sushi - $7000</option>
+                    </select>
+                    <label for="quantity-food3">Cantidad:</label>
+                    <button class="decrement" data-type="food">-</button>
+                    <span class="quantity" data-type="food">0</span>
+                    <button class="increment" data-type="food">+</button>
+                    <br>
+                    <label for="drink3">Bebida:</label>
+                    <select id="drink3" class="drink-menu">
+                        <option value="2">Refresco - $2000</option>
+                        <option value="3">Cerveza - $3000</option>
+                        <option value="1">Agua - $1000</option>
+                        <option value="4">Jugo - $4000</option>
+                        <option value="5">Cóctel - $5000</option>
+                    </select>
+                    <label for="quantity-drink3">Cantidad:</label>
+                    <button class="decrement" data-type="drink">-</button>
+                    <span class="quantity" data-type="drink">0</span>
+                    <button class="increment" data-type="drink">+</button>
                 </div>
+                <p>Total: $<span class="total">0</span></p>
+                <button class="order-button">Hacer Pedido</button>
+            </div>
+
+            <!-- Mesa 4 -->
+            <div class="table" id="table4">
+                <h2>Mesa 4</h2>
+                <div class="order-form">
+                    <label for="food4">Comida:</label>
+                    <select id="food4" class="food-menu">
+                        <option value="10">Pizza - $10000</option>
+                        <option value="5">Hamburguesa - $5000</option>
+                        <option value="4">Ensalada - $4000</option>
+                        <option value="6">Tacos - $6000</option>
+                        <option value="7">Sushi - $7000</option>
+                    </select>
+                    <label for="quantity-food4">Cantidad:</label>
+                    <button class="decrement" data-type="food">-</button>
+                    <span class="quantity" data-type="food">0</span>
+                    <button class="increment" data-type="food">+</button>
+                    <br>
+                    <label for="drink4">Bebida:</label>
+                    <select id="drink4" class="drink-menu">
+                        <option value="2">Refresco - $20000</option>
+                        <option value="3">Cerveza - $3000</option>
+                        <option value="1">Agua - $1000</option>
+                        <option value="4">Jugo - $4000</option>
+                        <option value="5">Cóctel - $5000</option>
+                    </select>
+                    <label for="quantity-drink4">Cantidad:</label>
+                    <button class="decrement" data-type="drink">-</button>
+                    <span class="quantity" data-type="drink">0</span>
+                    <button class="increment" data-type="drink">+</button>
+                </div>
+                <p>Total: $<span class="total">0</span></p>
+                <button class="order-button">Hacer Pedido</button>
+            </div>
+
+            <!-- Mesa 5 -->
+            <div class="table" id="table5">
+                <h2>Mesa 5</h2>
+                <div class="order-form">
+                    <label for="food5">Comida:</label>
+                    <select id="food5" class="food-menu">
+                        <option value="10">Pizza - $10000</option>
+                        <option value="5">Hamburguesa - $5000</option>
+                        <option value="4">Ensalada - $4000</option>
+                        <option value="6">Tacos - $6000</option>
+                        <option value="7">Sushi - $7000</option>
+                    </select>
+                    <label for="quantity-food5">Cantidad:</label>
+                    <button class="decrement" data-type="food">-</button>
+                    <span class="quantity" data-type="food">0</span>
+                    <button class="increment" data-type="food">+</button>
+                    <br>
+                    <label for="drink5">Bebida:</label>
+                    <select id="drink5" class="drink-menu">
+                        <option value="2">Refresco - $2000</option>
+                        <option value="3">Cerveza - $3000</option>
+                        <option value="1">Agua - $1000</option>
+                        <option value="4">Jugo - $4000</option>
+                        <option value="5">Cóctel - $5000</option>
+                    </select>
+                    <label for="quantity-drink5">Cantidad:</label>
+                    <button class="decrement" data-type="drink">-</button>
+                    <span class="quantity" data-type="drink">0</span>
+                    <button class="increment" data-type="drink">+</button>
+                </div>
+                <p>Total: $<span class="total">0</span></p>
+                <button class="order-button">Hacer Pedido</button>
             </div>
         </div>
-        <!-- Repetir para mesa2 y mesa3 -->
-        <!-- Ejemplo para Mesa 2 -->
-        <div class="mesa" id="mesa2">
-            <h2>Mesa 2</h2>
-            <button class="menu-btn" onclick="toggleMenu('menu2')">Mostrar Menú</button>
-            <div class="menu" id="menu2">
-                <div class="comidas">
-                    <p><strong>Comidas Diarias:</strong></p>
-                    <div class="item">
-                        <label for="hamburguesa2">Hamburguesa - $15,000</label>
-                        <input type="number" id="hamburguesa2" data-price="15000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="pizza2">Pizza - $20,000</label>
-                        <input type="number" id="pizza2" data-price="20000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="ensalada2">Ensalada - $12,000</label>
-                        <input type="number" id="ensalada2" data-price="12000" min="0" value="0">
-                    </div>
-                </div>
-                <button class="beverages-btn" onclick="toggleBeverages('beverages2')">Mostrar Bebidas</button>
-                <div class="beverages" id="beverages2">
-                    <div class="item">
-                        <label for="refresco2">Refresco - $5,000</label>
-                        <input type="number" id="refresco2" data-price="5000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="agua2">Agua - $3,000</label>
-                        <input type="number" id="agua2" data-price="3000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="cerveza2">Cerveza - $7,000</label>
-                        <input type="number" id="cerveza2" data-price="7000" min="0" value="0">
-                    </div>
-                </div>
-                <div class="total">
-                    <p>Precio Total: <span id="total2">$0</span></p>
-                    <p>Pedidos Realizados: <span id="orders2">0</span></p>
-                    <button onclick="addOrder('mesa2')">Añadir Pedido</button>
-                </div>
-            </div>
-        </div>
-        <!-- Ejemplo para Mesa 3 -->
-        <div class="mesa" id="mesa3">
-            <h2>Mesa 3</h2>
-            <button class="menu-btn" onclick="toggleMenu('menu3')">Mostrar Menú</button>
-            <div class="menu" id="menu3">
-                <div class="comidas">
-                    <p><strong>Comidas Diarias:</strong></p>
-                    <div class="item">
-                        <label for="hamburguesa3">Hamburguesa - $15,000</label>
-                        <input type="number" id="hamburguesa3" data-price="15000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="pizza3">Pizza - $20,000</label>
-                        <input type="number" id="pizza3" data-price="20000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="ensalada3">Ensalada - $12,000</label>
-                        <input type="number" id="ensalada3" data-price="12000" min="0" value="0">
-                    </div>
-                </div>
-                <button class="beverages-btn" onclick="toggleBeverages('beverages3')">Mostrar Bebidas</button>
-                <div class="beverages" id="beverages3">
-                    <div class="item">
-                        <label for="refresco3">Refresco - $5,000</label>
-                        <input type="number" id="refresco3" data-price="5000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="agua3">Agua - $3,000</label>
-                        <input type="number" id="agua3" data-price="3000" min="0" value="0">
-                    </div>
-                    <div class="item">
-                        <label for="cerveza3">Cerveza - $7,000</label>
-                        <input type="number" id="cerveza3" data-price="7000" min="0" value="0">
-                    </div>
-                </div>
-                <div class="total">
-                    <p>Precio Total: <span id="total3">$0</span></p>
-                    <p>Pedidos Realizados: <span id="orders3">0</span></p>
-                    <button onclick="addOrder('mesa3')">Añadir Pedido</button>
-                </div>
-            </div>
+
+        <!-- Total final -->
+        <div class="total-final">
+            <h2>Total Final de Todos los Pedidos: $<span id="final-total">0</span></h2>
         </div>
     </div>
-    <script src="js/menuComida.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
